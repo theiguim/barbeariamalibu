@@ -161,11 +161,11 @@ nav {
 }
 
 #about {
-  height: 115vh;
+  height: auto;
   background-color: rgb(37, 37, 37);
   display: flex;
   flex-direction: column;
-  padding: 100px 30px 20px 30px;
+  padding: 100px 30px 80px 30px;
   align-items: center;
 }
 
@@ -213,10 +213,8 @@ h6 {
   object-position: center;
 }
 
-
-
 #services {
-  height: 160vh;
+  height: auto;
   background-color: rgb(24, 23, 23);
   padding: 80px 30px;
   display: flex;
@@ -266,7 +264,7 @@ h6 {
 
 
 #agendamento {
-  height: 50vh;
+  height: auto;
   background-color: rgb(37, 37, 37);
   text-align: center;
   padding: 80px 0;
@@ -287,7 +285,7 @@ h6 {
 }
 
 #galeria {
-  height: 100vh;
+  height: auto;
   background-color: rgb(24, 23, 23);
   color: rgb(245, 236, 236);
   display: flex;
@@ -352,7 +350,7 @@ h6 {
 }
 
 #testemunhos {
-  height: 50vh;
+  height: auto;
   background-color: rgb(37, 37, 37);
   padding: 80px 30px;
   color: white;
@@ -431,7 +429,7 @@ h6 {
   }
 
   #about {
-    height: 120vh;
+    height: auto;
     display: flex;
     flex-direction: row;
     margin: 0;
@@ -447,7 +445,7 @@ h6 {
     margin: 0;
     width: 60vw;
     height: 100%;
-   
+
   }
 
   #about #imgAbout img {
@@ -457,12 +455,15 @@ h6 {
     object-fit: cover;
     object-position: center 10%;
   }
+
   #txtAbout p {
     font-size: 15px;
   }
+
   #txtAbout span {
     font-size: 10px;
   }
+
   #imgAbout p {
     font-size: 10px;
     max-width: 60%;
@@ -475,8 +476,9 @@ h6 {
     flex-direction: wrap;
     justify-content: space-between;
     overflow-x: hidden;
-   
+
   }
+
   .serviceElements {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -484,7 +486,7 @@ h6 {
     padding: 0 50px;
 
   }
-  
+
   .serviceElement {
     width: 250px;
     padding: 20px;
@@ -493,76 +495,77 @@ h6 {
 
   #agendamento {
     height: auto;
-  
+
   }
 
   #galeria {
     height: auto;
     display: flex;
     flex-direction: column;
-  align-items: start;
-  justify-content: center;
-  position: relative; 
+    align-items: start;
+    justify-content: center;
+    position: relative;
   }
 
   .accordion-item {
     display: flex;
     flex-direction: row;
   }
-  
+
   .accordion-header {
     flex: 1;
   }
-  
+
   .accordion-body {
     flex: 2;
     position: absolute;
-    top: 10%; 
-    left: 50%; 
-    z-index: 1; 
+    top: 10%;
+    left: 50%;
+    z-index: 1;
     transition: left 0.3s ease;
     width: 300px;
   }
-  
+
 
   .accordion-button:not(.collapsed)::after {
     content: "→";
   }
+
   .accordion-button.collapsed::after {
     background-image: none;
     content: "←";
   }
-  
+
   #galeria h2 {
     padding: 40px 0px 20px 30px;
   }
-  
+
   #galeria h3 {
     padding: 20px 0;
   }
-  
+
   #galeria .carousel-inner {
     width: 300px;
     max-height: 300px;
   }
-  
+
   #galeria .caroussel-item img {
     object-position: center;
   }
-  
+
   #testemunhos {
     height: auto;
     padding: 60px 30px;
   }
-  
+
   #testemunhos h2 {
     margin-bottom: 30px;
   }
-  
+
   .cItem {
     margin-bottom: 50px;
   }
-  
+
   .cItem p {
     font-size: 13px;
     width: 350px;
@@ -572,30 +575,30 @@ h6 {
     height: auto;
   }
 
-  #contato iframe{
+  #contato iframe {
     width: 300px;
     height: 150px;
     border-radius: 1%;
   }
-  
+
   #contato1>div {
     font-size: 17px;
   }
-  
+
   #contato1 a {
     text-decoration: none;
     color: rgb(245, 236, 236);
   }
-  
+
   #contato1 img {
     width: 130px;
   }
-  
+
   #contato1>div img {
     width: 17px;
   }
- 
-  
+
+
 
 
 
@@ -607,6 +610,410 @@ h6 {
 
 
 
-@media only screen and (min-width: 768px) and (max-width: 1024px) {}
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  #main {
+    background-position: center 40%;
+  }
 
-@media only screen and (min-width: 1025px) {}
+  #about {
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+  }
+
+  #about #txtAbout {
+    width: 40vw;
+    height: 100%;
+
+  }
+
+  #about #imgAbout {
+    margin: 0;
+    width: 60vw;
+    height: 100%;
+
+  }
+
+  #about #imgAbout img {
+
+    width: 50%;
+    height: 250px;
+    object-fit: cover;
+    object-position: center 10%;
+  }
+
+  #txtAbout p {
+    font-size: 15px;
+  }
+
+  #txtAbout span {
+    font-size: 10px;
+  }
+
+  #imgAbout p {
+    font-size: 10px;
+    max-width: 60%;
+  }
+
+
+  #services {
+    height: auto;
+    display: flex;
+    flex-direction: wrap;
+    justify-content: space-between;
+    overflow-x: hidden;
+
+  }
+
+  .serviceElements {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    padding: 0 50px;
+
+  }
+
+  .serviceElement {
+    width: 250px;
+    padding: 20px;
+    padding-bottom: 40px;
+  }
+
+  #agendamento {
+    height: auto;
+
+  }
+
+  #galeria {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    position: relative;
+  }
+
+  .accordion-item {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .accordion-header {
+    flex: 1;
+  }
+
+  .accordion-body {
+    flex: 2;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    z-index: 1;
+    transition: left 0.3s ease;
+    width: 300px;
+  }
+
+
+  .accordion-button:not(.collapsed)::after {
+    content: "→";
+  }
+
+  .accordion-button.collapsed::after {
+    background-image: none;
+    content: "←";
+  }
+
+  #galeria h2 {
+    padding: 40px 0px 20px 30px;
+  }
+
+  #galeria h3 {
+    padding: 20px 0;
+  }
+
+  #galeria .carousel-inner {
+    width: 300px;
+    max-height: 300px;
+  }
+
+  #galeria .caroussel-item img {
+    object-position: center;
+  }
+
+  #testemunhos {
+    height: auto;
+    padding: 60px 30px;
+  }
+
+  #testemunhos h2 {
+    margin-bottom: 30px;
+  }
+
+  .cItem {
+    margin-bottom: 50px;
+  }
+
+  .cItem p {
+    font-size: 13px;
+    width: 350px;
+  }
+
+  #contato {
+    height: auto;
+  }
+
+  #contato iframe {
+    width: 300px;
+    height: 150px;
+    border-radius: 1%;
+  }
+
+  #contato1>div {
+    font-size: 17px;
+  }
+
+  #contato1 a {
+    text-decoration: none;
+    color: rgb(245, 236, 236);
+  }
+
+  #contato1 img {
+    width: 130px;
+  }
+
+  #contato1>div img {
+    width: 17px;
+  }
+
+
+
+
+}
+
+@media only screen and (min-width: 1025px) {
+  h2 {
+    font-size: 50px;
+  }
+
+  #main {
+    background-position: center 40%;
+  }
+
+  #about {
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    margin: 0;
+  }
+
+  #about #txtAbout {
+    width: 50vw;
+
+  }
+
+  #about #imgAbout {
+    margin: 0;
+    width: 60vw;
+    height: 100%;
+
+  }
+
+  #about #imgAbout img {
+
+    width: 70%;
+    height: 450px;
+    object-fit: contain;
+    object-position: center 20%;
+  }
+
+  #txtAbout p {
+    font-size: 20px;
+  }
+
+  #txtAbout span {
+    font-size: 15px;
+  }
+
+  #imgAbout p {
+    font-size: 15px;
+    max-width: 70%;
+  }
+
+  #services {
+    height: auto;
+    display: flex;
+    flex-direction: wrap;
+    justify-content: space-between;
+    overflow-x: hidden;
+
+  }
+
+  .serviceElements {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    width: 100%;
+  }
+
+  .serviceElement {
+    width: 300px;
+    padding: 20px;
+    padding-bottom: 40px;
+  }
+
+  #agendamento {
+    height: auto;
+
+  }
+
+  #galeria {
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    position: relative;
+    padding-left: 30px;
+  }
+
+  .accordion-item {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .accordion-header {
+    flex: 1;
+  }
+
+  .accordion-body {
+    flex: 2;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    z-index: 1;
+    transition: left 0.3s ease;
+    width: 400px;
+  }
+
+
+  .accordion-button:not(.collapsed)::after {
+    content: "→";
+  }
+
+  .accordion-button.collapsed::after {
+    background-image: none;
+    content: "←";
+  }
+
+  #galeria h2 {
+    padding: 40px 0px 20px 30px;
+  }
+
+  #galeria h3 {
+    padding: 20px 0;
+  }
+
+  #galeria .carousel-inner {
+    width: 400px;
+    max-height: 600px;
+  }
+
+  #galeria .caroussel-item img {
+    object-position: center;
+  }
+
+  #testemunhos {
+    height: auto;
+    padding: 60px 30px;
+  }
+
+  #testemunhos h2 {
+    margin-bottom: 30px;
+  }
+
+  .cItem {
+    margin-bottom: 50px;
+  }
+
+  .cItem p {
+    font-size: 13px;
+    width: 350px;
+  }
+
+  #contato {
+    height: auto;
+  }
+
+  #contato iframe {
+    width: 300px;
+    height: 150px;
+    border-radius: 1%;
+  }
+
+  #contato1>div {
+    font-size: 17px;
+  }
+
+  #contato1 a {
+    text-decoration: none;
+    color: rgb(245, 236, 236);
+  }
+
+  #contato1 img {
+    width: 130px;
+  }
+
+  #contato1>div img {
+    width: 17px;
+  }
+
+
+
+
+
+
+
+
+}
+
+@media only screen and (min-width: 1150px) {
+
+  #imgAbout p {
+    font-size: 15px;
+    max-width: 50%;
+  }
+
+  .serviceElements {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .serviceElement {
+    width: 320px;
+  }
+
+  #galeria {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    position: relative;
+    padding-left: 70px;
+  }
+
+  .accordion-body {
+    flex: 2;
+    position: absolute;
+    top: 8vh;
+    left: 50vw;
+    z-index: 1;
+    transition: left 0.3s ease;
+    width: 36vw;
+  }
+
+  #galeria .carousel-inner {
+    width: 36vw;
+    max-height: 80vh;
+  }
+}
