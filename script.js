@@ -1,15 +1,32 @@
 document.addEventListener('DOMContentLoaded', function () {
-  const menuBtn = document.querySelector('.menu-icon');
-  const menu = document.querySelector('.menu');
+  const responsive = document.getElementById('responsive')
+  const ul = document.getElementById('ul')
 
-  menuBtn.addEventListener('click', function () {
-    if (menu.style.display === 'block') {
-      menu.style.display = 'none';
-    } else {
-      menu.style.display = 'block';
-    }
-  });
-});
+  window.addEventListener('resize', () => {
+      if (window.innerWidth >= 600) {
+          ul.style.display = 'flex'
+      } else {
+          ul.style.display = 'none'
+      }
+  })
+
+  responsive.addEventListener('click', () => {
+
+      if (ul.style.display == 'block') {
+          ul.style.display = 'none'
+      } else {
+          ul.style.display = 'block'
+      }
+  })
+
+  if (responsive.style.display == 'block') {
+      ul.addEventListener('click', (e) => {
+          if (e.target) {
+              ul.style.display = 'none'
+          }
+      })
+  }
+
 
 const button = document.getElementById('agende');
 
@@ -28,19 +45,16 @@ button.addEventListener('mouseleave', () => {
 });
 
 window.addEventListener('scroll', function () {
-  var header = document.querySelector('header');
-  var nav = document.querySelector('.menu')
+  var nav = document.querySelector('nav');
   var aboutSection = document.querySelector('#about');
 
   var sectionTop = aboutSection.offsetTop;
   var scrollPosition = window.scrollY;
 
   if (scrollPosition >= sectionTop) {
-    header.style.backgroundColor = '#000'; // Altera o fundo do cabeçalho para preto ao rolar sobre a seção #about
-    nav.style.backgroundColor = '#000';
+    nav.style.backgroundColor = '#000'; // Altera o fundo do cabeçalho para preto ao rolar sobre a seção #about
   } else {
-    header.style.backgroundColor = 'rgba(0, 0, 0, 0.486)'; // Restaura o fundo transparente do cabeçalho se não estiver rolando sobre a seção #about
-    nav.style.backgroundColor = 'rgba(0, 0, 0, 0.486)';
+    nav.style.backgroundColor = 'rgba(0, 0, 0, 0.486)'; // Restaura o fundo transparente do cabeçalho se não estiver rolando sobre a seção #about
   }
 });
 
@@ -68,4 +82,7 @@ proximoBtn.addEventListener('click', () => {
 anteriorBtn.addEventListener('click', () => {
   currentIndex = (currentIndex - 1 + slides.length) % slides.length;
   mostrarSlide(currentIndex);
+})
+
 });
+

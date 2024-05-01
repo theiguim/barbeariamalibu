@@ -31,72 +31,71 @@ h3 {
 
 
 header {
-  display: flex;
-  background-color: rgba(0, 0, 0, 0.486);
-  color: #fff;
-  min-height: 70px;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  z-index: 1000;
+  position: relative;
+  z-index: 5;
 }
 
 nav {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 10px 20px;
+  background-color: rgba(0, 0, 0, 0.144);
+  width: 100vw;
+  min-height: 74px;
+  position: fixed;
+  z-index: 5;
 }
 
-
-.logo {
-  /* width: 50px; */
-  padding: 0;
-}
-
-.logo img {
-  width: 125px;
-}
-
-.menu {
-  display: none;
-  background-color: rgba(0, 0, 0, 0.486);
+#logo {
+  height: 40px;
   position: absolute;
-  top: 70px;
-  left: 0;
+  top: 14px;
+  left: 25px;
+}
+
+#responsive {
+  position: absolute;
+  display: block;
+  background: white;
+  width: 30px;
+  height: 2px;
+  top: 35px;
+  right: 5px;
+  transition: 0.5s ease-in-out;
+  margin: 0 20px;
+
+}
+
+#responsive::after,
+#responsive::before {
+  background: white;
+  content: '';
+  display: block;
   width: 100%;
-  text-align: left;
-  padding-left: 20px;
+  height: 100%;
+  position: absolute;
+  transition: 0.5s ease-in-out;
 }
 
-.menu ul {
-  list-style: none;
-  padding: 0;
+#responsive:before {
+  top: -10px;
+}
+
+#responsive::after {
+  bottom: -10px;
+}
+
+#ul {
+  display: none;
+  padding: 70px 0 10px 13px;
   margin: 0;
+  list-style: none;
 }
 
-.menu ul li {
-  padding: 10px 0;
-}
-
-.menu ul li a {
-  color: #fff;
+#ul li a {
+  display: block;
+  padding: 10px;
   text-decoration: none;
-}
+  text-align: left;
+  color: white;
 
-.menu-icon {
-  display: inline-block;
-  cursor: pointer;
-}
-
-.bar {
-  width: 25px;
-  height: 3px;
-  background-color: #fff;
-  margin: 5px 0;
-  transition: 0.4s;
 }
 
 #main {
@@ -201,7 +200,8 @@ h6 {
 }
 
 #imgAbout p {
-  font-size: 17px;
+  font-size: 15px;
+  width: 80%;
   text-align: justify;
 }
 
@@ -428,6 +428,32 @@ h6 {
     background-position: center 40%;
   }
 
+  nav {
+    background-color: rgba(0, 0, 0, 0.144);
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: space-between;
+    gap: 0;
+    padding:0 80px 0 30px;
+  }
+  #logo {
+    height: 40px;
+    position: static;
+  }
+
+  #responsive {
+    display: none;
+  }
+
+  #ul {
+    padding: 0;
+  }
+
+  #ul li a {
+font-size: 18px;
+  }
+
   #about {
     height: auto;
     display: flex;
@@ -615,6 +641,55 @@ h6 {
     background-position: center 40%;
   }
 
+  /* ----------------- */
+  /*  nav controla logo e menu juntos*/
+
+  nav {
+    background-color: rgba(0, 0, 0, 0.144);
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: space-between;
+    gap: 0;
+    padding:0 80px 0 30px;
+  }
+  #logo {
+    height: 40px;
+    position: static;
+  }
+
+  #responsive {
+    display: none;
+  }
+
+  #ul {
+    padding: 0;
+  }
+
+  #ul li a {
+font-size: 18px;
+  }
+
+
+  /* --------------------------- */
+  #mainContent {
+    width: 500px;
+  }
+
+  #mainContent h1 {
+    font-size: 140px;
+  }
+
+  #mainContent p {
+    font-size: 25px;
+  }
+
+  #mainContent #agende {
+    width: auto;
+    padding: 18px;
+    font-size: 25px;
+  }
+
   #about {
     height: auto;
     display: flex;
@@ -795,20 +870,67 @@ h6 {
     font-size: 50px;
   }
 
+  nav {
+    background-color: rgba(0, 0, 0, 0.144);
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: space-between;
+    gap: 0;
+    padding:0 80px 0 30px;
+  }
+
+  #logo {
+    height: 40px;
+    position: static;
+  }
+
+  #responsive {
+    display: none;
+  }
+
+  #ul {
+    padding: 0;
+  }
+
+  #ul li a {
+font-size: 18px;
+  }
+
   #main {
     background-position: center 40%;
   }
+
+  #mainContent {
+    width: 500px;
+  }
+
+  #mainContent h1 {
+    font-size: 140px;
+  }
+
+  #mainContent p {
+    font-size: 25px;
+  }
+
+  #mainContent #agende {
+    width: auto;
+    padding: 18px;
+    font-size: 25px;
+  }
+
 
   #about {
     height: auto;
     display: flex;
     flex-direction: row;
-    align-items: start;
+    align-items: center;
     margin: 0;
   }
 
   #about #txtAbout {
     width: 50vw;
+    padding-left: 100px;
 
   }
 
@@ -862,9 +984,9 @@ h6 {
     padding-bottom: 40px;
   }
 
-  #agendamento {
-    height: auto;
-
+  #agendamento p {
+    font-size: 20px;
+    max-width: 500px;
   }
 
   #galeria {
@@ -937,12 +1059,15 @@ h6 {
   }
 
   .cItem p {
-    font-size: 13px;
-    width: 350px;
+    font-size: 17px;
+    width: 450px
   }
 
   #contato {
     height: auto;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 200px;
   }
 
   #contato iframe {
@@ -967,17 +1092,11 @@ h6 {
   #contato1>div img {
     width: 17px;
   }
-
-
-
-
-
-
-
-
 }
 
 @media only screen and (min-width: 1150px) {
+
+
 
   #imgAbout p {
     font-size: 15px;
