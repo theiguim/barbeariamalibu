@@ -54,7 +54,7 @@ window.addEventListener('scroll', function () {
   if (scrollPosition >= sectionTop) {
     nav.style.backgroundColor = '#000'; // Altera o fundo do cabeçalho para preto ao rolar sobre a seção #about
   } else {
-    nav.style.backgroundColor = 'rgba(0, 0, 0, 0.486)'; // Restaura o fundo transparente do cabeçalho se não estiver rolando sobre a seção #about
+    nav.style.backgroundColor = 'rgba(0, 0, 0, 0.144)'; // Restaura o fundo transparente do cabeçalho se não estiver rolando sobre a seção #about
   }
 });
 
@@ -84,5 +84,30 @@ anteriorBtn.addEventListener('click', () => {
   mostrarSlide(currentIndex);
 })
 
+
+
+
+
+
+
+
+
+
 });
 
+
+
+
+
+window.addEventListener('scroll', function() {
+  var tagsH2 = document.querySelectorAll('h2');
+  var triggerPosition = window.innerHeight * 0.90; // Por exemplo, 75% da altura da janela
+
+  tagsH2.forEach(function(tag) {
+    var tagPosition = tag.getBoundingClientRect().top;
+
+    if (tagPosition < triggerPosition) {
+      tag.classList.add('animate');
+    }
+  });
+});
